@@ -11,11 +11,11 @@ const connect = function() {
 
   conn.on("connect", () => {
     console.log("Successfully connected to game server");
-    conn.write("Name: CC")
+    conn.write("Name: CC");
     //conn.write("Move: up")
   });
 
-  
+
   conn.on("data", () => {
     console.log('you ded cuz you idled');
   });
@@ -23,4 +23,4 @@ const connect = function() {
   return conn;
 };
 
-module.exports = connect;
+module.exports = { connect };
